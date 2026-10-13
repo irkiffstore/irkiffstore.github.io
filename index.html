@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irkiff Store - Jual Aplikasi & Akun Premium Terpercaya</title>
+    <title>irkiffstore - Jual Aplikasi & Akun Premium Terpercaya</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,93 +13,67 @@
                 extend: {
                     colors: {
                         tosca: {
-                            50: '#e6fffa',
-                            100: '#b2f5ea',
-                            400: '#38b2ac',
-                            500: '#00b4d8',
-                            600: '#0096c7',
-                            700: '#0077b6',
-                            800: '#03045e',
-                            brand: '#0ea5e9',
-                            emerald: '#10b981',
-                            teal: '#14b8a6',
-                            accent: '#2dd4bf'
+                            50: '#e6fffa', 100: '#b2f5ea', 400: '#38b2ac', 500: '#00b4d8', 
+                            600: '#0096c7', 700: '#0077b6', 800: '#03045e', brand: '#0ea5e9', 
+                            emerald: '#10b981', teal: '#14b8a6', accent: '#2dd4bf'
                         }
                     }
                 }
             }
         }
     </script>
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome Icons & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b0f19;
-            color: #f3f4f6;
-            overflow-x: hidden;
-        }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0b0f19;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #14b8a6;
-            border-radius: 4px;
-        }
-        /* Glassmorphism Effect */
-        .glass-card {
-            background: rgba(17, 24, 39, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(20, 184, 166, 0.15);
-        }
-        .glass-nav {
-            background: rgba(11, 15, 25, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(20, 184, 166, 0.1);
-        }
-        /* Ripple & Click Animations */
-        .click-effect {
-            transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .click-effect:active {
-            transform: scale(0.95);
-        }
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-        .animate-float {
-            animation: floatSlow 4s ease-in-out infinite;
-        }
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 15px rgba(20, 184, 166, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(20, 184, 166, 0.7); }
-        }
-        .glow-effect {
-            animation: pulseGlow 3s infinite;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f3f4f6; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b0f19; }
+        ::-webkit-scrollbar-thumb { background: #14b8a6; border-radius: 4px; }
+        .glass-card { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(20, 184, 166, 0.15); }
+        .glass-nav { background: rgba(11, 15, 25, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(20, 184, 166, 0.1); }
+        .click-effect { transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .click-effect:active { transform: scale(0.95); }
+        @keyframes floatSlow { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+        .animate-float { animation: floatSlow 4s ease-in-out infinite; }
+        @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 15px rgba(20, 184, 166, 0.3); } 50% { box-shadow: 0 0 30px rgba(20, 184, 166, 0.7); } }
+        .glow-effect { animation: pulseGlow 3s infinite; }
+        .logo-transparent { mix-blend-mode: screen; filter: contrast(130%) brightness(110%); }
+        #splash-screen { transition: opacity 0.6s ease, visibility 0.6s ease; }
+        #splash-screen.fade-out { opacity: 0; visibility: hidden; }
     </style>
 </head>
 <body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col selection:bg-teal-500 selection:text-white">
+        <!-- OPENING SPLASH SCREEN -->
+    <div id="splash-screen" class="fixed inset-0 z-50 bg-[#0b0f19] flex flex-col items-center justify-center space-y-6">
+        <div class="relative">
+            <div class="absolute inset-0 bg-teal-500/30 rounded-full blur-2xl animate-pulse"></div>
+            <div class="w-24 h-24 rounded-3xl glass-card flex items-center justify-center p-3 relative z-10 border border-teal-500/40 glow-effect overflow-hidden">
+                <img src="logo irkiff.png" alt="Logo irkiffstore" class="w-full h-full object-contain logo-transparent">
+            </div>
+        </div>
+        <div class="text-center space-y-2">
+            <h2 class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+                irkiffstore
+            </h2>
+            <p class="text-xs text-teal-400/80 tracking-widest uppercase font-semibold">Menyiapkan Toko Premium...</p>
+        </div>
+        <div class="w-48 h-1.5 bg-gray-800 rounded-full overflow-hidden">
+            <div id="splash-progress" class="h-full bg-gradient-to-r from-teal-400 to-emerald-400 w-0 transition-all duration-700"></div>
+        </div>
+    </div>
 
-    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand Logo -->
             <a href="#" class="flex items-center space-x-3 group click-effect">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-teal-500/30 group-hover:rotate-6 transition-transform">
-                    <i class="fa-solid fa-store text-gray-900 text-xl font-bold"></i>
+                <div class="w-11 h-11 rounded-2xl glass-card flex items-center justify-center p-1.5 shadow-lg shadow-teal-500/20 group-hover:rotate-6 transition-transform overflow-hidden border border-teal-500/30">
+                    <img src="logo irkiff.png" alt="Logo" class="w-full h-full object-contain logo-transparent">
                 </div>
                 <div>
                     <span class="text-xl sm:text-2xl font-extrabold tracking-tight bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400 bg-clip-text text-transparent">
-                        Irkiff Store
+                        irkiffstore
                     </span>
                     <span class="block text-[10px] text-teal-400/80 font-semibold tracking-widest uppercase">Premium Apps Provider</span>
                 </div>
@@ -122,7 +96,7 @@
                 </button>
 
                 <!-- Quick WhatsApp CTA -->
-                <a href="https://wa.me/6285861019121?text=Halo%20Irkiff%20Store,%20aku%20pengen%20nanya%20tentang%20aplikasi%20premium." target="_blank" class="hidden sm:inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-emerald-500 text-gray-950 font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-teal-500/25 hover:opacity-95 click-effect transition-all text-sm">
+                <a href="https://wa.me/6285861019121" target="_blank" class="hidden sm:inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-emerald-500 text-gray-950 font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-teal-500/25 hover:opacity-95 click-effect transition-all text-sm">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     <span>Admin WhatsApp</span>
                 </a>
@@ -141,7 +115,7 @@
             <a href="#features" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-teal-400 font-medium">Keunggulan</a>
             <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-teal-400 font-medium">FAQ</a>
             <div class="pt-2">
-                <a href="https://wa.me/6285861019121?text=Halo%20Irkiff%20Store" target="_blank" class="w-full flex items-center justify-center space-x-2 bg-teal-500 text-gray-950 font-bold py-3 rounded-xl shadow-lg">
+                <a href="https://wa.me/6285861019121?text=Halo%20irkiffstore" target="_blank" class="w-full flex items-center justify-center space-x-2 bg-teal-500 text-gray-950 font-bold py-3 rounded-xl shadow-lg">
                     <i class="fa-brands fa-whatsapp text-xl"></i>
                     <span>Chat Admin WhatsApp</span>
                 </a>
@@ -149,42 +123,33 @@
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        <!-- Glowing background decoration -->
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[650px] h-[350px] md:h-[650px] bg-teal-500/15 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute top-10 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto space-y-6">
-                <!-- Badge -->
                 <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-card border border-teal-500/30 text-teal-400 text-xs sm:text-sm font-semibold tracking-wide animate-float">
                     <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
                     <span>100% Legal, Garansi Full & Proses Super Kilat</span>
                 </div>
-
-                <!-- Main Heading -->
                 <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
                     Pusat Langganan <span class="bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400 bg-clip-text text-transparent">Aplikasi Premium</span> Terpercaya
                 </h1>
-
-                <!-- Subtitle -->
                 <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-                    Nikmati hiburan tanpa batas dan aplikasi kreator profesional dengan harga mahasiswa. Alight Motion, Netflix, Spotify, YouTube, dan lainnya siap pakai!
+                    Nikmati hiburan tanpa batas dan aplikasi kreator profesional dengan harga murah. Alight Motion, Netflix, Spotify, YouTube, dan lainnya siap pakai!
                 </p>
-
-                <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                     <a href="#products" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-teal-500 to-emerald-500 text-gray-950 font-extrabold rounded-2xl shadow-xl shadow-teal-500/30 hover:scale-105 click-effect transition-all flex items-center justify-center space-x-3">
                         <i class="fa-solid fa-bag-shopping text-lg"></i>
                         <span>Lihat Semua Produk</span>
                     </a>
-                    <a href="https://wa.me/6285861019121?text=Halo%20Irkiff%20Store,%20saya%20mau%20beli%20aplikasi%20premium" target="_blank" class="w-full sm:w-auto px-8 py-4 glass-card text-teal-300 font-bold rounded-2xl hover:bg-teal-500/10 hover:border-teal-400/40 hover:scale-105 click-effect transition-all flex items-center justify-center space-x-3">
+                    <a href="https://wa.me/6285861019121" target="_blank" class="w-full sm:w-auto px-8 py-4 glass-card text-teal-300 font-bold rounded-2xl hover:bg-teal-500/10 hover:border-teal-400/40 hover:scale-105 click-effect transition-all flex items-center justify-center space-x-3">
                         <i class="fa-brands fa-whatsapp text-teal-400 text-xl"></i>
                         <span>Tanya Admin</span>
                     </a>
                 </div>
-
-                <!-- Trust Stats -->
                 <div class="grid grid-cols-3 gap-4 pt-12 max-w-xl mx-auto border-t border-teal-500/10 mt-12">
                     <div class="text-center">
                         <h4 class="text-2xl sm:text-3xl font-extrabold text-teal-400">10rb+</h4>
@@ -202,27 +167,23 @@
             </div>
         </div>
     </section>
-
+        <!-- PRODUCTS SECTION -->
     <section id="products" class="py-20 bg-[#070a12]/50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
             <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
                 <span class="text-teal-400 text-xs sm:text-sm font-bold tracking-widest uppercase bg-teal-500/10 px-3.5 py-1.5 rounded-full border border-teal-500/20">Katalog Pilihan</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Pilih Aplikasi Impianmu</h2>
-                <p class="text-gray-400 text-sm sm:text-base">Semua akun legal, anti legal-legal club, dan full garansi selama masa langganan.</p>
+                <p class="text-gray-400 text-sm sm:text-base">Semua akun legal dan bergaransi penuh selama masa langganan.</p>
             </div>
 
             <!-- Search & Filter Controls -->
             <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 max-w-4xl mx-auto">
-                <!-- Search Box -->
                 <div class="relative w-full md:w-96">
                     <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-teal-400">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
                     <input type="text" id="search-input" onkeyup="filterProducts()" placeholder="Cari aplikasi (misal: Netflix, Spotify)..." class="w-full pl-11 pr-4 py-3 rounded-2xl glass-card text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-teal-400 transition-all shadow-inner">
                 </div>
-
-                <!-- Category Filters -->
                 <div class="flex items-center space-x-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none">
                     <button onclick="setCategory('all')" id="cat-all" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-teal-500 to-emerald-500 text-gray-950 shadow-md shadow-teal-500/20 click-effect transition-all">Semua</button>
                     <button onclick="setCategory('streaming')" id="cat-streaming" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap glass-card text-gray-300 hover:text-teal-400 click-effect transition-all">Streaming & Video</button>
@@ -231,12 +192,8 @@
                 </div>
             </div>
 
-            <!-- Product Grid Container -->
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Products will be injected dynamically via JavaScript -->
-            </div>
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
 
-            <!-- Empty State (Hidden by default) -->
             <div id="empty-state" class="hidden text-center py-16 space-y-4">
                 <div class="w-16 h-16 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center mx-auto text-2xl">
                     <i class="fa-solid fa-box-open"></i>
@@ -247,16 +204,16 @@
         </div>
     </section>
 
+    <!-- FEATURES SECTION -->
     <section id="features" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
                 <span class="text-teal-400 text-xs sm:text-sm font-bold tracking-widest uppercase bg-teal-500/10 px-3.5 py-1.5 rounded-full border border-teal-500/20">Mengapa Kami?</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Keunggulan Belanja di Irkiff Store</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Keunggulan Belanja di irkiffstore</h2>
                 <p class="text-gray-400 text-sm sm:text-base">Kami berkomitmen memberikan kenyamanan dan keamanan tingkat tinggi bagi setiap pelanggan.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
                 <div class="glass-card p-8 rounded-3xl relative group hover:border-teal-400/50 transition-all duration-300 hover:-translate-y-1">
                     <div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-teal-500 group-hover:text-gray-950 transition-all shadow-md">
                         <i class="fa-solid fa-bolt"></i>
@@ -264,8 +221,6 @@
                     <h3 class="text-xl font-bold mb-3 text-gray-100">Proses Super Cepat</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Akun atau link undangan langsung dikirimkan hanya dalam hitungan menit setelah pembayaran terkonfirmasi.</p>
                 </div>
-
-                <!-- Feature 2 -->
                 <div class="glass-card p-8 rounded-3xl relative group hover:border-teal-400/50 transition-all duration-300 hover:-translate-y-1">
                     <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-500 group-hover:text-gray-950 transition-all shadow-md">
                         <i class="fa-solid fa-shield-halved"></i>
@@ -273,8 +228,6 @@
                     <h3 class="text-xl font-bold mb-3 text-gray-100">Garansi Penuh 100%</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Kendala akun error, locked, atau kendala lain selama masa langganan? Kami ganti baru tanpa ribet.</p>
                 </div>
-
-                <!-- Feature 3 -->
                 <div class="glass-card p-8 rounded-3xl relative group hover:border-teal-400/50 transition-all duration-300 hover:-translate-y-1">
                     <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-500 group-hover:text-gray-950 transition-all shadow-md">
                         <i class="fa-solid fa-headset"></i>
@@ -285,7 +238,7 @@
             </div>
         </div>
     </section>
-
+        <!-- FAQ SECTION -->
     <section id="faq" class="py-20 bg-[#070a12]/50 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 space-y-3">
@@ -295,64 +248,52 @@
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ Item 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-teal-500/10">
                     <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-6 text-left font-semibold text-gray-200 hover:text-teal-400 transition-colors">
-                        <span>Bagaimana cara membeli aplikasi di Irkiff Store?</span>
+                        <span>Bagaimana cara membeli aplikasi di irkiffstore?</span>
                         <i id="faq-icon-1" class="fa-solid fa-chevron-down text-teal-400 transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-1" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-teal-500/10 pt-4">
-                        Pilih produk yang kamu inginkan, klik tombol "Beli Sekarang" atau masukkan ke keranjang. Kamu akan diarahkan ke WhatsApp admin dengan format pesanan otomatis untuk melanjutkan pembayaran dan pengiriman akun.
+                        Pilih produk yang kamu inginkan, klik tombol "Beli" atau masukkan ke keranjang. Kamu akan otomatis diarahkan ke bot WhatsApp untuk melanjutkan transaksi.
                     </div>
                 </div>
-
-                <!-- FAQ Item 2 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-teal-500/10">
                     <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-6 text-left font-semibold text-gray-200 hover:text-teal-400 transition-colors">
                         <span>Apakah akun yang dijual legal dan aman?</span>
                         <i id="faq-icon-2" class="fa-solid fa-chevron-down text-teal-400 transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-2" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-teal-500/10 pt-4">
-                        Ya, sangat legal dan aman. Kami menggunakan sistem pembayaran resmi dan akun privat/keluarga resmi yang bergaransi penuh selama masa aktif langganan Anda.
+                        Ya, sangat legal dan aman. Kami menggunakan sistem pembayaran resmi dan bergaransi penuh selama masa aktif langganan Anda.
                     </div>
                 </div>
-
-                <!-- FAQ Item 3 -->
                 <div class="glass-card rounded-2xl overflow-hidden border border-teal-500/10">
                     <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-6 text-left font-semibold text-gray-200 hover:text-teal-400 transition-colors">
                         <span>Berapa lama proses pengiriman akun setelah bayar?</span>
                         <i id="faq-icon-3" class="fa-solid fa-chevron-down text-teal-400 transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-3" class="hidden px-6 pb-6 text-sm text-gray-400 leading-relaxed border-t border-teal-500/10 pt-4">
-                        Biasanya proses hanya memakan waktu 3 sampai 10 menit saja selama admin sedang online dan pesanan dalam antrean normal.
+                        Biasanya proses hanya memakan waktu 3 sampai 10 menit saja selama bot dan admin sedang aktif.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="glass-nav border-t border-teal-500/10 pt-16 pb-12 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-                <!-- Col 1 -->
                 <div class="space-y-4 md:col-span-2">
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center shadow-lg">
-                            <i class="fa-solid fa-store text-gray-950 font-bold"></i>
+                        <div class="w-10 h-10 rounded-xl glass-card flex items-center justify-center p-1.5 shadow-lg border border-teal-500/30 overflow-hidden">
+                            <img src="1000043935.jpg" alt="Logo" class="w-full h-full object-contain logo-transparent">
                         </div>
-                        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-teal-400 to-emerald-300 bg-clip-text text-transparent">Irkiff Store</span>
+                        <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-teal-400 to-emerald-300 bg-clip-text text-transparent">irkiffstore</span>
                     </div>
                     <p class="text-gray-400 text-sm max-w-md leading-relaxed">
-                        Penyedia akun dan aplikasi premium terpercaya nomor 1 di Indonesia dengan harga terjangkau, garansi penuh, dan layanan cepat.
+                        Penyedia akun dan aplikasi premium terpercaya di Indonesia dengan harga terjangkau, garansi penuh, dan layanan cepat.
                     </p>
-                    <div class="flex items-center space-x-3 pt-2">
-                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-xl glass-card text-teal-400 flex items-center justify-center hover:bg-teal-500 hover:text-gray-950 transition-all click-effect"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://tiktok.com" target="_blank" class="w-10 h-10 rounded-xl glass-card text-teal-400 flex items-center justify-center hover:bg-teal-500 hover:text-gray-950 transition-all click-effect"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="https://whatsapp.com" target="_blank" class="w-10 h-10 rounded-xl glass-card text-teal-400 flex items-center justify-center hover:bg-teal-500 hover:text-gray-950 transition-all click-effect"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
                 </div>
-
-                <!-- Col 2 -->
                 <div>
                     <h4 class="font-bold text-gray-200 mb-4 text-sm tracking-wider uppercase">Menu Cepat</h4>
                     <ul class="space-y-2.5 text-sm text-gray-400">
@@ -362,8 +303,6 @@
                         <li><a href="#faq" class="hover:text-teal-400 transition-colors">FAQ / Bantuan</a></li>
                     </ul>
                 </div>
-
-                <!-- Col 3 -->
                 <div>
                     <h4 class="font-bold text-gray-200 mb-4 text-sm tracking-wider uppercase">Metode Pembayaran</h4>
                     <div class="grid grid-cols-3 gap-2 text-center text-xs">
@@ -376,19 +315,15 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Bottom Copyright -->
             <div class="pt-8 border-t border-teal-500/10 text-center text-xs text-gray-500">
-                &copy; 2026 Irkiff Store. All rights reserved. Made with <i class="fa-solid fa-heart text-teal-400 mx-1"></i> for Premium Users.
+                &copy; 2026 irkiffstore. All rights reserved.
             </div>
         </div>
     </footer>
-
-    <!-- Cart Modal Drawer -->
+        <!-- CART MODAL DRAWER -->
     <div id="cart-modal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="toggleCartModal()"></div>
         <div class="absolute inset-y-0 right-0 max-w-md w-full glass-card bg-[#0b0f19]/95 shadow-2xl border-l border-teal-500/20 flex flex-col transform transition-transform duration-300">
-            <!-- Header -->
             <div class="p-6 border-b border-teal-500/10 flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold">
@@ -403,13 +338,7 @@
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
-
-            <!-- Cart Items List -->
-            <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-teal-500/10">
-                <!-- Injected via JS -->
-            </div>
-
-            <!-- Cart Footer -->
+            <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-teal-500/10"></div>
             <div class="p-6 border-t border-teal-500/10 space-y-4 bg-[#0b0f19]">
                 <div class="flex items-center justify-between">
                     <span class="text-gray-400 text-sm">Total Estimasi:</span>
@@ -423,7 +352,7 @@
         </div>
     </div>
 
-    <!-- Toast Notification Modal/Popup -->
+    <!-- TOAST NOTIFICATION -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="glass-card bg-gray-900/90 border border-teal-500/30 px-5 py-4 rounded-2xl shadow-2xl flex items-center space-x-3">
             <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
@@ -436,141 +365,48 @@
         </div>
     </div>
 
+    <!-- JAVASCRIPT -->
     <script>
-        // Product Data Catalogue
+        window.addEventListener('DOMContentLoaded', () => {
+            const progressBar = document.getElementById('splash-progress');
+            const splashScreen = document.getElementById('splash-screen');
+            setTimeout(() => { progressBar.style.width = '70%'; }, 200);
+            setTimeout(() => { progressBar.style.width = '100%'; }, 600);
+            setTimeout(() => { splashScreen.classList.add('fade-out'); }, 1000);
+        });
+
         const products = [
-            {
-                id: 1,
-                name: "Alight Motion Pro",
-                category: "editor",
-                badge: "Terlaris",
-                badgeColor: "bg-teal-500/20 text-teal-400 border-teal-500/30",
-                duration: "1 Bulan / 1 Tahun",
-                price: 1000,
-                originalPrice: 179000,
-                icon: "fa-solid fa-wand-magic-sparkles",
-                color: "from-teal-500 to-cyan-500",
-                desc: "No Watermark, Full Preset & Efek Terbuka, Versi Resmi Bergaransi."
-            },
-            {
-                id: 2,
-                name: "CapCut Pro",
-                category: "editor",
-                badge: "Populer",
-                badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
-                duration: "7 Hari",
-                price: 5000,
-                originalPrice: 17000,
-                icon: "fa-solid fa-video",
-                color: "from-emerald-500 to-teal-400",
-                desc: "Buka semua template VIP, efek AI canggih, dan export kualitas 4K."
-            },
-            {
-                id: 3,
-                name: "Netflix Premium",
-                category: "streaming",
-                badge: "HD / 4K",
-                badgeColor: "bg-red-500/20 text-red-400 border-red-500/30",
-                duration: "1 Bulan",
-                price: 35000,
-                originalPrice: 120000,
-                icon: "fa-solid fa-film",
-                color: "from-red-500 to-pink-500",
-                desc: "Sharing / Privat screen, UHD 4K, anti lemot, support TV & Smartphone."
-            },
-            {
-                id: 4,
-                name: "Spotify Premium",
-                category: "music",
-                badge: "Individual",
-                badgeColor: "bg-green-500/25 text-green-400 border-green-500/30",
-                duration: "1 Bulan / 3 Bulan",
-                price: 20000,
-                originalPrice: 55000,
-                icon: "fa-solid fa-music",
-                color: "from-green-500 to-emerald-600",
-                desc: "Bebas iklan, skip sepuasnya, download lagu offline kualitas tertinggi."
-            },
-            {
-                id: 5,
-                name: "YouTube Premium",
-                category: "streaming",
-                badge: "No Ads",
-                badgeColor: "bg-rose-500/20 text-rose-400 border-rose-500/30",
-                duration: "1 Bulan",
-                price: 10000,
-                originalPrice: 60000,
-                icon: "fa-brands fa-youtube",
-                color: "from-red-600 to-rose-500",
-                desc: "Nonton YouTube tanpa iklan, bisa putar di latar belakang (Background Play)."
-            },
-            {
-                id: 6,
-                name: "Vidio Premier",
-                category: "streaming",
-                badge: "Sports & Movie",
-                badgeColor: "bg-blue-500/20 text-blue-400 border-blue-500/30",
-                duration: "1 Bulan",
-                price: 10000,
-                originalPrice: 49000,
-                icon: "fa-solid fa-tv",
-                color: "from-blue-600 to-indigo-600",
-                desc: "Nonton Liga Inggris, UCL, Anime, dan serial drama lokal eksklusif."
-            },
-            {
-                id: 7,
-                name: "Disney+ Hotstar",
-                category: "streaming",
-                badge: "Marvel & StarWars",
-                badgeColor: "bg-indigo-500/20 text-indigo-400 border-indigo-500/30",
-                duration: "1 Bulan",
-                price: 25000,
-                originalPrice: 79000,
-                icon: "fa-solid fa-clapperboard",
-                color: "from-indigo-600 to-purple-600",
-                desc: "Streaming film Marvel terbaru, Disney Originals, dan bioskop keluarga."
-            },
-            {
-                id: 8,
-                name: "Canva Pro",
-                category: "editor",
-                badge: "Desain Kilat",
-                badgeColor: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
-                duration: "1 Tahun",
-                price: 4000,
-                originalPrice: 129000,
-                icon: "fa-solid fa-palette",
-                color: "from-cyan-500 to-blue-500",
-                desc: "Unlock semua elemen premium, template grafis, dan fitur Magic Write AI."
-            }
+            { id: 1, name: "Alight Motion Pro", category: "editor", badge: "Terlaris", badgeColor: "bg-teal-500/20 text-teal-400 border-teal-500/30", duration: "1 Tahun", price: 1000, originalPrice: 179000, icon: "fa-solid fa-wand-magic-sparkles", color: "from-teal-500 to-cyan-500", desc: "No Watermark, Full Preset & Efek Terbuka, Versi Resmi Bergaransi." },
+            { id: 2, name: "CapCut Pro", category: "editor", badge: "Populer", badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30", duration: "7 Hari / 30 Hari", price: 5000, originalPrice: 17000, icon: "fa-solid fa-video", color: "from-emerald-500 to-teal-400", desc: "Buka semua template VIP, efek AI canggih, dan export kualitas 4K." },
+            { id: 3, name: "Vidio Premier", category: "streaming", badge: "Sports & Movie", badgeColor: "bg-blue-500/20 text-blue-400 border-blue-500/30", duration: "1 Bulan", price: 10000, originalPrice: 49000, icon: "fa-solid fa-tv", color: "from-blue-600 to-indigo-600", desc: "Nonton Liga Inggris, UCL, Anime, dan serial drama lokal eksklusif." },
+            { id: 4, name: "YouTube Premium", category: "streaming", badge: "No Ads", badgeColor: "bg-rose-500/20 text-rose-400 border-rose-500/30", duration: "1 Bulan", price: 10000, originalPrice: 60000, icon: "fa-brands fa-youtube", color: "from-red-600 to-rose-500", desc: "Nonton YouTube tanpa iklan, bisa putar di latar belakang (Background Play)." },
+            { id: 5, name: "Spotify Premium", category: "music", badge: "Individual", badgeColor: "bg-green-500/25 text-green-400 border-green-500/30", duration: "1 Bulan / 3 Bulan", price: 20000, originalPrice: 55000, icon: "fa-solid fa-music", color: "from-green-500 to-emerald-600", desc: "Bebas iklan, skip sepuasnya, download lagu offline kualitas tertinggi." },
+            { id: 6, name: "Canva Pro", category: "editor", badge: "Desain Kilat", badgeColor: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30", duration: "1 Bulan", price: 4000, originalPrice: 129000, icon: "fa-solid fa-palette", color: "from-cyan-500 to-blue-500", desc: "Unlock semua elemen premium, template grafis, dan fitur Magic Write AI." },
+            { id: 7, name: "Apple Music", category: "music", badge: "Hi-Res Audio", badgeColor: "bg-pink-500/20 text-pink-400 border-pink-500/30", duration: "1 Bulan", price: 15000, originalPrice: 49000, icon: "fa-solid fa-compact-disc", color: "from-pink-600 to-rose-600", desc: "Streaming jutaan lagu kualitas lossless dengan Spatial Audio." },
+            { id: 8, name: "Crunchyroll", category: "streaming", badge: "Anime HD", badgeColor: "bg-amber-500/20 text-amber-400 border-amber-500/30", duration: "1 Bulan", price: 15000, originalPrice: 49000, icon: "fa-solid fa-bolt-lightning", color: "from-amber-500 to-orange-600", desc: "Nonton anime terbaru sub Indo tanpa iklan sesaat setelah rilis di Jepang." },
+            { id: 9, name: "Bstation", category: "streaming", badge: "Bilibili VIP", badgeColor: "bg-teal-400/20 text-teal-300 border-teal-400/30", duration: "1 Bulan", price: 12000, originalPrice: 39000, icon: "fa-solid fa-play", color: "from-teal-400 to-cyan-600", desc: "Akses anime eksklusif VIP, donghua, dan kreator favorit tanpa iklan." },
+            { id: 10, name: "Netflix Premium", category: "streaming", badge: "UHD 4K", badgeColor: "bg-red-500/20 text-red-400 border-red-500/30", duration: "1 Bulan", price: 35000, originalPrice: 120000, icon: "fa-solid fa-film", color: "from-red-500 to-pink-500", desc: "Sharing / Privat screen, UHD 4K, anti lemot, support TV & Smartphone." },
+            { id: 11, name: "Disney+ Hotstar", category: "streaming", badge: "Marvel & StarWars", badgeColor: "bg-indigo-500/20 text-indigo-400 border-indigo-500/30", duration: "1 Bulan", price: 25000, originalPrice: 79000, icon: "fa-solid fa-clapperboard", color: "from-indigo-600 to-purple-600", desc: "Streaming film Marvel terbaru, Disney Originals, dan bioskop keluarga." }
         ];
 
         let currentCategory = 'all';
         let cart = [];
 
-        // Initialize App on Load
         window.onload = function() {
             renderProducts(products);
             updateCartBadge();
         };
 
-        // Render Product Cards
         function renderProducts(items) {
             const grid = document.getElementById('product-grid');
             const emptyState = document.getElementById('empty-state');
             grid.innerHTML = '';
-
-            if (items.length === 0) {
-                emptyState.classList.remove('hidden');
-                return;
-            } else {
-                emptyState.classList.add('hidden');
-            }
+            if (items.length === 0) { emptyState.classList.remove('hidden'); return; }
+            else { emptyState.classList.add('hidden'); }
 
             items.forEach(product => {
                 const card = document.createElement('div');
                 card.className = "glass-card rounded-3xl p-6 flex flex-col justify-between group hover:border-teal-400/50 hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-300 hover:-translate-y-1.5 relative overflow-hidden";
-                
                 card.innerHTML = `
                     <div class="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-full blur-2xl group-hover:bg-teal-500/15 transition-all pointer-events-none"></div>
                     <div>
@@ -578,15 +414,12 @@
                             <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr ${product.color} text-gray-950 flex items-center justify-center text-xl shadow-lg shadow-teal-500/20 group-hover:scale-110 transition-transform">
                                 <i class="${product.icon}"></i>
                             </div>
-                            <span class="text-[11px] font-bold px-3 py-1 rounded-full border ${product.badgeColor}">
-                                ${product.badge}
-                            </span>
+                            <span class="text-[11px] font-bold px-3 py-1 rounded-full border ${product.badgeColor}">${product.badge}</span>
                         </div>
                         <h3 class="text-lg font-bold text-gray-100 mb-1 group-hover:text-teal-400 transition-colors">${product.name}</h3>
                         <p class="text-xs text-teal-400/90 font-medium mb-3"><i class="fa-regular fa-clock mr-1"></i> ${product.duration}</p>
                         <p class="text-gray-400 text-xs leading-relaxed mb-6">${product.desc}</p>
                     </div>
-
                     <div class="pt-4 border-t border-teal-500/10 flex items-center justify-between">
                         <div>
                             <span class="text-[10px] text-gray-500 line-through block">Rp ${product.originalPrice.toLocaleString('id-ID')}</span>
@@ -606,19 +439,15 @@
             });
         }
 
-        // Category Filter Logic
         function setCategory(cat) {
             currentCategory = cat;
             document.querySelectorAll('.category-btn').forEach(btn => {
                 btn.className = "category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap glass-card text-gray-300 hover:text-teal-400 click-effect transition-all";
             });
-            const activeBtn = document.getElementById(`cat-${cat}`);
-            activeBtn.className = "category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-teal-500 to-emerald-500 text-gray-950 shadow-md shadow-teal-500/20 click-effect transition-all";
-            
+            document.getElementById(`cat-${cat}`).className = "category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-teal-500 to-emerald-500 text-gray-950 shadow-md shadow-teal-500/20 click-effect transition-all";
             filterProducts();
         }
 
-        // Search & Filter Combined
         function filterProducts() {
             const query = document.getElementById('search-input').value.toLowerCase();
             let filtered = products.filter(p => {
@@ -629,17 +458,10 @@
             renderProducts(filtered);
         }
 
-        // Cart Management
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             const existing = cart.find(item => item.id === productId);
-            
-            if (existing) {
-                existing.qty += 1;
-            } else {
-                cart.push({ ...product, qty: 1 });
-            }
-
+            if (existing) { existing.qty += 1; } else { cart.push({ ...product, qty: 1 }); }
             updateCartBadge();
             showToast("Berhasil Ditambahkan!", `${product.name} telah dimasukkan ke keranjang.`);
         }
@@ -647,15 +469,9 @@
         function updateCartBadge() {
             const badge = document.getElementById('cart-badge');
             const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-            
             badge.innerText = totalCount;
-            if (totalCount > 0) {
-                badge.classList.remove('scale-0');
-                badge.classList.add('scale-100');
-            } else {
-                badge.classList.remove('scale-100');
-                badge.classList.add('scale-0');
-            }
+            if (totalCount > 0) { badge.classList.remove('scale-0'); badge.classList.add('scale-100'); }
+            else { badge.classList.remove('scale-100'); badge.classList.add('scale-0'); }
             renderCartItems();
         }
 
@@ -663,40 +479,25 @@
             const container = document.getElementById('cart-items-container');
             const countLabel = document.getElementById('cart-count-label');
             const totalPriceEl = document.getElementById('cart-total-price');
-            
             countLabel.innerText = `${cart.reduce((sum, item) => sum + item.qty, 0)} item`;
             container.innerHTML = '';
 
             if (cart.length === 0) {
-                container.innerHTML = `
-                    <div class="text-center py-12 space-y-3">
-                        <div class="w-14 h-14 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center mx-auto text-xl">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>
-                        <p class="text-gray-400 text-sm">Keranjang belanja masih kosong.</p>
-                    </div>
-                `;
+                container.innerHTML = `<div class="text-center py-12 space-y-3"><div class="w-14 h-14 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center mx-auto text-xl"><i class="fa-solid fa-basket-shopping"></i></div><p class="text-gray-400 text-sm">Keranjang belanja masih kosong.</p></div>`;
                 totalPriceEl.innerText = "Rp 0";
                 return;
             }
 
             let grandTotal = 0;
-
             cart.forEach(item => {
                 const itemTotal = item.price * item.qty;
                 grandTotal += itemTotal;
-
                 const div = document.createElement('div');
                 div.className = "flex items-center justify-between pt-4 first:pt-0";
                 div.innerHTML = `
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr ${item.color} text-gray-950 flex items-center justify-center text-sm shadow-md">
-                            <i class="${item.icon}"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-sm text-gray-200">${item.name}</h4>
-                            <span class="text-xs text-teal-400">Rp ${item.price.toLocaleString('id-ID')} x ${item.qty}</span>
-                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr ${item.color} text-gray-950 flex items-center justify-center text-sm shadow-md"><i class="${item.icon}"></i></div>
+                        <div><h4 class="font-bold text-sm text-gray-200">${item.name}</h4><span class="text-xs text-teal-400">Rp ${item.price.toLocaleString('id-ID')} x ${item.qty}</span></div>
                     </div>
                     <div class="flex items-center space-x-2">
                         <button onclick="changeQty(${item.id}, -1)" class="w-7 h-7 rounded-lg glass-card text-gray-300 hover:text-teal-400 flex items-center justify-center text-xs click-effect">-</button>
@@ -707,7 +508,6 @@
                 `;
                 container.appendChild(div);
             });
-
             totalPriceEl.innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
         }
 
@@ -715,9 +515,7 @@
             const item = cart.find(i => i.id === id);
             if (item) {
                 item.qty += delta;
-                if (item.qty <= 0) {
-                    cart = cart.filter(i => i.id !== id);
-                }
+                if (item.qty <= 0) { cart = cart.filter(i => i.id !== id); }
             }
             updateCartBadge();
         }
@@ -727,78 +525,40 @@
             updateCartBadge();
         }
 
-        // Buy Now Quick Action
         function buyNow(productId) {
-            const product = products.find(p => p.id === productId);
-            const message = encodeURIComponent(`Halo Irkiff Store, saya ingin memesan:\n\n*${product.name}*\nDurasi: ${product.duration}\nHarga: Rp ${product.price.toLocaleString('id-ID')}\n\nMohon proses pesanan saya.`);
-            window.open(`https://wa.me/6285861019121?text=${message}`, '_blank');
+            window.open(`https://wa.me/639619014865?text=list`, '_blank');
         }
 
-        // WhatsApp Checkout from Cart
         function checkoutWhatsApp() {
-            if (cart.length === 0) {
-                showToast("Keranjang Kosong", "Pilih produk terlebih dahulu sebelum checkout.", true);
-                return;
-            }
-
-            let message = "Halo Irkiff Store, saya ingin melakukan checkout pesanan berikut:\n\n";
-            let total = 0;
-
-            cart.forEach((item, index) => {
-                const subtotal = item.price * item.qty;
-                total += subtotal;
-                message += `${index + 1}. *${item.name}* (${item.duration}) x${item.qty} - Rp ${subtotal.toLocaleString('id-ID')}\n`;
-            });
-
-            message += `\n*Total Keseluruhan: Rp ${total.toLocaleString('id-ID')}*\n\nMohon petunjuk pembayaran selanjutnya. Terima kasih!`;
-            
-            const encoded = encodeURIComponent(message);
-            window.open(`https://wa.me/6285861019121?text=${encoded}`, '_blank');
+            if (cart.length === 0) { showToast("Keranjang Kosong", "Pilih produk terlebih dahulu sebelum checkout.", true); return; }
+            window.open(`https://wa.me/639619014865?text=list`, '_blank');
         }
 
-        // UI Toggles
         function toggleCartModal() {
             const modal = document.getElementById('cart-modal');
-            if (modal.classList.contains('hidden')) {
-                modal.classList.remove('hidden');
-            } else {
-                modal.classList.add('hidden');
-            }
+            modal.classList.toggle('hidden');
         }
 
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('mobile-menu-icon');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                icon.className = "fa-solid fa-xmark text-lg";
-            } else {
-                menu.classList.add('hidden');
-                icon.className = "fa-solid fa-bars text-lg";
-            }
+            menu.classList.toggle('hidden');
+            icon.className = menu.classList.contains('hidden') ? "fa-solid fa-bars text-lg" : "fa-solid fa-xmark text-lg";
         }
 
         function toggleFaq(id) {
             const content = document.getElementById(`faq-content-${id}`);
             const icon = document.getElementById(`faq-icon-${id}`);
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.style.transform = "rotate(180deg)";
-            } else {
-                content.classList.add('hidden');
-                icon.style.transform = "rotate(0deg)";
-            }
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? "rotate(0deg)" : "rotate(180deg)";
         }
 
-        // Toast Notification Function
         function showToast(title, msg, isError = false) {
             const toast = document.getElementById('toast');
             document.getElementById('toast-title').innerText = title;
             document.getElementById('toast-msg').innerText = msg;
-            
             toast.classList.remove('translate-y-24', 'opacity-0');
             toast.classList.add('translate-y-0', 'opacity-100');
-
             setTimeout(() => {
                 toast.classList.remove('translate-y-0', 'opacity-100');
                 toast.classList.add('translate-y-24', 'opacity-0');
