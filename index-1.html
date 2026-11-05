@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080612">
+<title>Irkiff Store — Gojo Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080612;--line:rgba(160,111,255,.27);--purple:#a855f7;--blue:#4f8cff;--text:#f7f3ff;--muted:#aaa1c2}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#30205b,transparent 48%),#080612;color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(#a675ff0b 1px,transparent 1px),linear-gradient(90deg,#a675ff0b 1px,transparent 1px);background-size:44px 44px}
+#lightning{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.7}.aurora{position:fixed;width:300px;height:300px;border-radius:50%;filter:blur(100px);opacity:.2;pointer-events:none}.a1{background:#8b35ff;left:-210px;top:20%}.a2{background:#216bff;right:-220px;top:55%}
+.wrap{position:relative;z-index:1;width:min(100% - 32px,490px);margin:auto;padding:35px 0 30px}.top{text-align:center;color:#b7a9d8;font-size:10px;letter-spacing:3px;margin-bottom:20px}.hero{text-align:center;animation:rise .8s both}
+.portrait{height:235px;position:relative;overflow:hidden;border:1px solid #a774ff66;border-radius:25px;background:radial-gradient(ellipse,#804eff66,transparent 60%),linear-gradient(145deg,#321e5b,#0a0919);box-shadow:0 0 35px #8843ff30;margin-bottom:23px}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 30%}.placeholder{position:absolute;inset:0;display:grid;place-content:center;gap:8px;text-align:center;color:#c9b6ff}.placeholder b{font:700 29px "Space Grotesk";letter-spacing:3px}.placeholder span{font-size:10px;letter-spacing:2px}
+h1{font:700 31px "Space Grotesk";margin:0;text-shadow:0 0 24px #9e5bff72}.check{font-size:11px;background:#8b5cf6;border-radius:50%;padding:3px 5px;vertical-align:5px}.tag{font-size:13px;line-height:1.7;color:var(--muted)}.status{display:inline-flex;gap:7px;align-items:center;margin-top:8px;border:1px solid #76dcff44;border-radius:30px;padding:7px 11px;color:#b9e6ff;font-size:10px;letter-spacing:1px}.dot{width:6px;height:6px;background:#5af0b0;border-radius:50%;box-shadow:0 0 10px #5af0b0}
+.label{display:flex;gap:10px;align-items:center;margin:30px 2px 13px;color:#a99ac9;font-size:10px;letter-spacing:2.5px}.label:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,#a855f777,transparent)}
+.links{display:grid;gap:11px}.link{display:flex;align-items:center;gap:13px;min-height:72px;padding:12px 15px;border:1px solid var(--line);border-radius:17px;text-decoration:none;color:var(--text);background:linear-gradient(110deg,#1f163bf0,#0d0c1ef2);box-shadow:0 8px 28px #0004;overflow:hidden;transition:.25s;animation:rise .7s both}.link:nth-child(1){animation-delay:.08s}.link:nth-child(2){animation-delay:.16s}.link:nth-child(3){animation-delay:.24s}.link:nth-child(4){animation-delay:.32s}.link:hover{transform:translateY(-3px);border-color:#ae7bff;box-shadow:0 12px 34px #6432dc33,0 0 22px #795cff20}.link:active{transform:scale(.975);box-shadow:0 0 30px #965bff61}.primary{border-color:#8773ff8c;background:linear-gradient(110deg,#422770b3,#10132ff5)}
+.ico{width:43px;height:43px;flex:0 0 43px;border-radius:13px;display:grid;place-items:center;color:#d0b5ff;background:#894fff30;border:1px solid #a682ff40;font-size:21px}.copy{flex:1;min-width:0}.copy b{display:block;font-size:13px}.copy small{display:block;color:#a69bbd;font-size:10px;margin-top:4px}.arrow{font-size:21px;color:#a78bfa}
+.sound{margin:19px auto 0;display:flex;align-items:center;gap:8px;border:1px solid #9c75ff55;border-radius:30px;padding:9px 14px;background:#1b1332bd;color:#cbb9f6;font:600 11px "DM Sans";cursor:pointer}.sounddot{width:7px;height:7px;border-radius:50%;background:#8c72ff;box-shadow:0 0 9px #8c72ff}
+.socials{display:flex;justify-content:center;gap:10px;margin-top:23px}.social{width:39px;height:39px;border-radius:13px;border:1px solid var(--line);display:grid;place-items:center;color:#b9a4e9;text-decoration:none;background:#151027bd}footer{text-align:center;margin-top:26px;color:#716889;font-size:10px;letter-spacing:.7px}footer strong{color:#bca4f5}
+.toast{position:fixed;z-index:5;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;padding:10px 15px;border:1px solid #aa78ff66;border-radius:30px;background:#19112d;color:#eee3ff;font-size:11px;transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes rise{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style></head>
+<body><canvas id="lightning"></canvas><div class="aurora a1"></div><div class="aurora a2"></div>
+<main class="wrap"><div class="top">✦ OFFICIAL LINKS ✦</div>
+<header class="hero"><div class="portrait"><div class="placeholder" id="placeholder"><b>IRKIFF</b><span>GOJO EDITION · BLUE × PURPLE</span></div><img src="assets/gojo.png" alt="Gojo Satoru" id="gojo" onerror="this.style.display='none'"></div>
+<h1>IRKIFF STORE <span class="check">✓</span></h1><p class="tag">Your digital needs, all in one place.<br>Temukan akses toko, komunitas, dan konten terbaru di sini.</p><div class="status"><span class="dot"></span>DIGITAL STORE · ONLINE</div></header>
+<div class="label">EXPLORE & CONNECT</div><nav class="links">
+<a class="link primary" data-link="tiktok" href="#" target="_blank" rel="noopener"><span class="ico">♪</span><span class="copy"><b>TikTok</b><small>Konten dan update terbaru</small></span><span class="arrow">›</span></a>
+<a class="link" data-link="group" href="#" target="_blank" rel="noopener"><span class="ico">⌘</span><span class="copy"><b>Grup Order Aplikasi Premium</b><small>Info produk, stok, dan pemesanan</small></span><span class="arrow">›</span></a>
+<a class="link" data-link="channel" href="#" target="_blank" rel="noopener"><span class="ico">▤</span><span class="copy"><b>Saluran Preset</b><small>Preset, resource, dan update</small></span><span class="arrow">›</span></a>
+<a class="link" data-link="whatsapp" href="#" target="_blank" rel="noopener"><span class="ico">✆</span><span class="copy"><b>WhatsApp Toko</b><small>Hubungi admin untuk bantuan dan order</small></span><span class="arrow">›</span></a>
+</nav><button class="sound" id="sound"><span class="sounddot"></span><span id="soundText">SOUND OFF · TAP TO ENABLE</span></button>
+<div class="socials"><a class="social" data-link="tiktok" href="#" target="_blank" rel="noopener">♪</a><a class="social" data-link="whatsapp" href="#" target="_blank" rel="noopener">✆</a></div>
+<footer>© 2026 <strong>IRKIFF STORE</strong> · THANKS FOR VISITING</footer></main><div class="toast" id="toast">Opening link...</div>
+<script>
+// EDIT LINK DI BAGIAN INI SAJA
+const CONFIG={
+ tiktok:"https://www.tiktok.com/@USERNAME",
+ group:"https://chat.whatsapp.com/GROUP_INVITE",
+ channel:"https://whatsapp.com/channel/CHANNEL_ID",
+ whatsapp:"6285861019121" // nomor dengan kode negara, tanpa tanda +
+};
+document.querySelectorAll("[data-link]").forEach(a=>{const k=a.dataset.link;a.href=k==="whatsapp"?"https://wa.me/"+CONFIG.whatsapp.replace(/\D/g,""):CONFIG[k]});
+const gojo=document.getElementById("gojo");gojo.onload=()=>document.getElementById("placeholder").style.display="none";
+let audio=null,on=false;function soundFX(){if(!on)return;try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();if(audio.state==="suspended")audio.resume();let o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime;o.type="sine";o.frequency.setValueAtTime(620,t);o.frequency.exponentialRampToValueAtTime(280,t+.13);g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.05,t+.01);g.gain.exponentialRampToValueAtTime(.001,t+.16);o.connect(g);g.connect(audio.destination);o.start(t);o.stop(t+.17)}catch(e){}}
+document.getElementById("sound").onclick=()=>{on=!on;document.getElementById("soundText").textContent=on?"SOUND ON · TAP TO MUTE":"SOUND OFF · TAP TO ENABLE";document.querySelector(".sounddot").style.background=on?"#5af0b0":"#8c72ff";soundFX()};
+document.querySelectorAll(".link,.social").forEach(a=>a.addEventListener("click",()=>{soundFX();let t=document.getElementById("toast");t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1000)}));
+// Decorative animated violet lightning
+const c=document.getElementById("lightning"),x=c.getContext("2d");let W,H,bolts=[],last=0;
+function size(){let d=devicePixelRatio||1;W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}addEventListener("resize",size);size();
+function bolt(){let sx=Math.random()*W,sy=Math.random()*H*.65,p=[{x:sx,y:sy}];for(let i=0;i<9;i++)p.push({x:p[i].x+(Math.random()-.5)*75,y:p[i].y+22+Math.random()*30});return{p,life:1,w:1+Math.random()}}
+function draw(b){x.save();x.globalAlpha=b.life*.8;x.lineCap="round";for(let [col,w,blur] of [["#783bff",8,22],["#bd8cff",3,12],["#eee2ff",1,4]]){x.beginPath();x.moveTo(b.p[0].x,b.p[0].y);b.p.slice(1).forEach(p=>x.lineTo(p.x,p.y));x.strokeStyle=col;x.lineWidth=w*b.w;x.shadowColor="#a45bff";x.shadowBlur=blur;x.stroke()}x.restore()}
+function frame(t){x.clearRect(0,0,W,H);if(t-last>950+Math.random()*1100){bolts.push(bolt());last=t}bolts.forEach(b=>{draw(b);b.life-=.035});bolts=bolts.filter(b=>b.life>0);requestAnimationFrame(frame)}
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches)requestAnimationFrame(frame);
+</script></body></html>
